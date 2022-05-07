@@ -18,11 +18,11 @@ int main(int argc, char** argv)
   runManager -> SetUserInitialization(new MyActionInitialization());
   // ********************************
   // The following command has to be uncommented only when the geometry of the detector, particles, Physics have been defined 
-   runManager -> Initialize();
+  runManager -> Initialize();
   // ********************************
 
-  G4UIExecutive *ui = new G4UIExecutive(argc,argv);
-  G4VisManager *visManager = new G4VisExecutive();
+  G4UIExecutive *ui         = new G4UIExecutive(argc,argv);
+  G4VisManager  *visManager = new G4VisExecutive();
   visManager -> Initialize();
 
   G4UImanager *UImanager =  G4UImanager::GetUIpointer();
@@ -33,6 +33,7 @@ int main(int argc, char** argv)
   UImanager -> ApplyCommand("/vis/drawVolume");
   UImanager -> ApplyCommand("/vis/viewer/set/autoRefresh true");
   UImanager -> ApplyCommand("/vis/scene/add/trajectories smooth");
+  UImanager -> ApplyCommand("/vis/scene/endOfEventAction accumulate");
   
   ui ->SessionStart();
 
