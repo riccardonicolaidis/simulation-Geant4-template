@@ -8,6 +8,7 @@
 // User defined classes include
 
 #include "generator.hh"
+#include "run.hh"
 
 // Class definition - declaration
 

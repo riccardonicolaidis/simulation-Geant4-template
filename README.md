@@ -22,6 +22,8 @@ The main folder contains all the sources files.
 
 This is a **CMake** project. Therefore, a CMake file is required. In this case, the file is named **CMakeLists.txt**. The subdirectory **build/** is needed to compile the project.
 
+The project also contains a method for saving data in root files. The instructions for Geant to store data are contained in the **run.cc** file.
+
 ---------------------------------------
 
 
